@@ -33,10 +33,35 @@ public class UsefullScrit : MonoBehaviour
         return done;
     }
 
+    public int[] CloseBubblelist(int i , int j)
+    {
+        int[] toTest = new int[] { i + 1, i - 1, i - 17, i + 17 };
+        if (i == 0 || i % 2 == 0)
+        {
+            toTest[4] = i - 17 + 1;
+            toTest[5] = i + 17 + 1;
+        }
+        else
+        {
+            toTest[4] = i - 17 - 1;
+            toTest[5] = i + 17 - 1;
+        }
+        return toTest;
+    } 
+
     private bool isBubbleMaintain(int i, int j)
     {
-
-        return true;
+        
+        int[] toTest = CloseBubblelist(i, j);
+        for(int k = 0; k < toTest.Length; k++)
+        {
+            if(GameBoard[i/17][i%17] != null)
+            {
+                return true;
+            }
+        }
+        //test each cell
+        return false;
     }
 
     // Update is called once per frame
