@@ -64,6 +64,19 @@ public class UsefullScrit : MonoBehaviour
         return false;
     }
 
+    private Color getRandomBubble()
+    {
+        string rdnstr ="";
+        //getrdn HEX from color
+        System.Random r = new System.Random();
+        int rInt = r.Next(1, InitGame.CountOfBubbleColor+1); //for ints       
+        Color color = InitGame.ColorDico[PlayerPrefs.GetString("Color" + (rInt).ToString())];
+        ColorUtility.TryParseHtmlString(rdnstr,out color);
+
+        return color;
+    }
+
+
     // Update is called once per frame
     void Update()
     {

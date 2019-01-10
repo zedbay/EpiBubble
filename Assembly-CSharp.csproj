@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scr.cs" />
+    <Compile Include="Assets\Scripts\Bubble.cs" />
     <Compile Include="Assets\Scripts\InitGame.cs" />
     <Compile Include="Assets\Scripts\InitParty.cs" />
     <Compile Include="Assets\Scripts\MooveMenu.cs" />

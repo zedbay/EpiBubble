@@ -7,6 +7,7 @@ public class InitParty : MonoBehaviour
 {
     public static Color[][] Initboard;
     // Start is called before the first frame update
+    //Bubble+CurrentBubble
     void Start()
     {
         initBoard();

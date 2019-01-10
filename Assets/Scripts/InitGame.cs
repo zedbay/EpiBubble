@@ -8,6 +8,15 @@ public class InitGame : MonoBehaviour
     #region UsersSetting
     public List<Color> SelectedBubbleColor;
     public Color SelectedarrowColor;
+    public static int CountOfBubbleColor;
+    public int CountOfBubbleRow;
+    public int CountOfBubbleColumn;
+    public int CountOfBubbleToExplode;
+    public int CountOfShotBeforeBubbleInsertion;
+    public int SpeedShotBubble;
+    public string Difficulty;
+    public static string SelectedSpeed;
+    public int Volum;
     #endregion
     #region ColorsDico
     public static Dictionary<string, Color> ColorDico;
@@ -89,30 +98,38 @@ public class InitGame : MonoBehaviour
     void Start()
     {
         InitializeValues();
-        if (!firstInit())
-        {
-            getSettingValues();
-        }
+        firstInit();
+        getSettingValues();      
     }
 
     private void getSettingValues()
     {
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color1")]);
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color2")]);
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color3")]);
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color4")]);
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color5")]);
-        SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color6")]);
 
+        CountOfBubbleColor = PlayerPrefs.GetInt("CountOfBubbleColor");
+        CountOfBubbleRow = PlayerPrefs.GetInt("CountOfBubbleRow");
+        CountOfBubbleColumn = PlayerPrefs.GetInt("CountOfBubbleColumn");
+        CountOfBubbleToExplode = PlayerPrefs.GetInt("CountOfBubbleToExplode");
+
+        Difficulty = PlayerPrefs.GetString("Difficulty");
+        SelectedSpeed = PlayerPrefs.GetString("SelectedSpeed");
+        CountOfShotBeforeBubbleInsertion = PlayerPrefs.GetInt("CountOfShotBeforeBubbleInsertion");
+        SpeedShotBubble = PlayerPrefs.GetInt("SpeedShotBubble");
+        Volum = PlayerPrefs.GetInt("Volum");
+
+        for (int i = 0; i < CountOfBubbleColor; i++)
+        {
+            SelectedBubbleColor.Add(ColorDico[PlayerPrefs.GetString("Color" + (i + 1).ToString())]);
+        }
         SelectedarrowColor = arrowColorDico[PlayerPrefs.GetString("ArrowColor")];
-
-
     }
 
     public bool firstInit()
     {
-        bool first = false;
-        if (PlayerPrefs.GetString("Color1") == null)
+        if (PlayerPrefs.GetString("Color1") != null)
+        {
+            return false;
+        }
+        else
         {
             PlayerPrefs.SetString("BubbleColor1", "Blue");
             PlayerPrefs.SetString("BubbleColor2", "Red");
@@ -120,11 +137,23 @@ public class InitGame : MonoBehaviour
             PlayerPrefs.SetString("BubbleColor4", "Yellow");
             PlayerPrefs.SetString("BubbleColor5", "Fuchsia");
             PlayerPrefs.SetString("BubbleColor6", "Lime");
-          
+
             PlayerPrefs.SetString("ArrowColor", "Astral");
-            first = true;
+
+            PlayerPrefs.SetInt("CountOfBubbleColor", 6);
+            PlayerPrefs.SetInt("CountOfBubbleRow", 15);
+            PlayerPrefs.SetInt("CountOfBubbleColumn", 17);
+            PlayerPrefs.SetInt("CountOfBubbleToExplode", 3);
+
+
+            PlayerPrefs.SetString("Difficulty", "easy");
+            PlayerPrefs.SetString("SelectedSpeed", "low");
+            PlayerPrefs.SetInt("CountOfShotBeforeBubbleInsertion", 10);
+            PlayerPrefs.SetInt("SpeedShotBubble", 80);
+            PlayerPrefs.SetInt("Volum", 5);
+
+            return true;
         }
-        return first;
     }
     // Update is called once per frame
     void Update()
