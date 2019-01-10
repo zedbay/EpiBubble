@@ -74,7 +74,6 @@ public class Bubble : MonoBehaviour
                 return true;
             }
         }
-        //test each cell
         return false;
     }
 }

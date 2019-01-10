@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UsefullScrit : MonoBehaviour
 {
-    public Color[][] GameBoard { get; private set; }
+    public Bubble[][] GameBoard { get; private set; }
 
     // Start is called before the first frame update
     void Start()
