@@ -5,19 +5,37 @@ using UnityEngine;
 
 public class InitParty : MonoBehaviour
 {
-    public static Color[][] Initboard;
+    public static Bubble[][] InitBoard;
+    Bubble CurrentBubble;
+    Bubble NextBubble;
     // Start is called before the first frame update
-    //Bubble+CurrentBubble
     void Start()
     {
         initBoard();
     }
 
+    private Bubble getRandomBubble()
+    {
+        string rdnstr = "";
+        //getrdn HEX from color
+        System.Random r = new System.Random();
+        int rInt = r.Next(1, InitGame.CountOfBubbleColor + 1); //for ints       
+        Color color = InitGame.ColorDico[PlayerPrefs.GetString("Color" + (rInt).ToString())];
+        ColorUtility.TryParseHtmlString(rdnstr, out color);
+        Bubble bubble = new Bubble(color);
+        return bubble;
+    }
+
     private void initBoard()
     {
-        Initboard = new Color[15][];
-        for(int i = 0;i < 15;i++){
-            Initboard[i] = new Color[17];
+        InitBoard = new Bubble[InitGame.CountOfBubbleRow][];
+        for(int i = 0;i < InitGame.CountOfBubbleRow; i++){
+            InitBoard[i] = new Bubble[InitGame.CountOfBubbleColumn];
+            for (int j = 0; j < InitGame.CountOfBubbleColumn; j++)
+            {
+                InitBoard[i][j] = getRandomBubble();
+                //Initboard[i][j].position = (i, j);
+            }
         }
     }
 

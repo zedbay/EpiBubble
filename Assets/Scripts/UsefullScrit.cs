@@ -10,7 +10,7 @@ public class UsefullScrit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameBoard = InitParty.Initboard;
+        GameBoard = InitParty.InitBoard;
     }
 
     public bool bubbleFalling()

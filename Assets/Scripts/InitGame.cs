@@ -9,8 +9,8 @@ public class InitGame : MonoBehaviour
     public List<Color> SelectedBubbleColor;
     public Color SelectedarrowColor;
     public static int CountOfBubbleColor;
-    public int CountOfBubbleRow;
-    public int CountOfBubbleColumn;
+    public static int CountOfBubbleRow;
+    public static int CountOfBubbleColumn;
     public int CountOfBubbleToExplode;
     public int CountOfShotBeforeBubbleInsertion;
     public int SpeedShotBubble;
