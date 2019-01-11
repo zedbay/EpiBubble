@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MooveMenu : MonoBehaviour
 {
@@ -13,11 +14,14 @@ public class MooveMenu : MonoBehaviour
     public Button m_leave;
     public Button m_not_leave;
     public Button m_go_leave;
+    public Button m_start;
+    
 
     public GameObject m_menu;
     public GameObject m_menu_settings;
     public GameObject m_menu_resume;
     public GameObject m_menu_leave;
+
 
 
 
@@ -33,12 +37,18 @@ public class MooveMenu : MonoBehaviour
         m_leave.onClick.AddListener(ShowLeave);
         m_not_leave.onClick.AddListener(ShowMenu);
         m_go_leave.onClick.AddListener(Leave);
+        m_start.onClick.AddListener(StartGame);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    private void StartGame()
+    {
+        SceneManager.LoadScene("GameScren");
     }
 
     private void Leave()

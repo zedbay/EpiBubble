@@ -1473,7 +1473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40379f2901d47c643bbd8f200d624756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedColors: []
 --- !u!1 &421714905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,6 +2857,7 @@ MonoBehaviour:
   m_leave: {fileID: 2054722222}
   m_not_leave: {fileID: 1000357816}
   m_go_leave: {fileID: 48095088}
+  m_start: {fileID: 1303666390}
   m_menu: {fileID: 1098676327}
   m_menu_settings: {fileID: 1236316578}
   m_menu_resume: {fileID: 291372383}
@@ -7385,6 +7385,7 @@ GameObject:
   - component: {fileID: 2030730943}
   - component: {fileID: 2030730942}
   - component: {fileID: 2030730946}
+  - component: {fileID: 2030730947}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -7488,6 +7489,25 @@ MonoBehaviour:
   m_volume: {fileID: 542382059}
   m_soundOn: {fileID: 21300000, guid: 7db0a4c4352f94ef7912e72af584e793, type: 3}
   m_soundOff: {fileID: 21300000, guid: c1439c82ab3d143d0a37dbf58bec5491, type: 3}
+--- !u!114 &2030730947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030730941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf6927d2d117430788830478c124540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedBubbleColor: []
+  SelectedarrowColor: {r: 0, g: 0, b: 0, a: 0}
+  CountOfBubbleToExplode: 0
+  CountOfShotBeforeBubbleInsertion: 0
+  SpeedShotBubble: 0
+  Difficulty: 
+  Volum: 0
 --- !u!1 &2054722220
 GameObject:
   m_ObjectHideFlags: 0

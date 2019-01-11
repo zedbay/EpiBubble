@@ -6,8 +6,6 @@ using UnityEngine;
 public class SettingScript : MonoBehaviour
 {
     public List<Color> SelectedBubbleColors;
-
-<<<<<<< HEAD
     public static Dictionary<string, Color> ColorDico;
     public static Color Black;
     public static Color Silver;
@@ -71,7 +69,7 @@ public class SettingScript : MonoBehaviour
         SelectedBubbleColors.Add(Color.yellow);
     }
 
-    private void firstInit()
+    public void firstInit()
     {
         if (PlayerPrefs.GetString("Color1") == null)
         {
@@ -84,7 +82,7 @@ public class SettingScript : MonoBehaviour
         }
     }
 
-    private void UpdateSelectedColors()
+    public void UpdateSelectedColors()
     {
         SelectedBubbleColors.Clear();
         //SelectedBubbleColors.Add(fromPlayerPrefs.GetString("Color1"));
@@ -94,20 +92,9 @@ public class SettingScript : MonoBehaviour
         PlayerPrefs.GetString("Color4");
         PlayerPrefs.GetString("Color5");
         PlayerPrefs.GetString("Color6");
-=======
-    // Start is called before the first frame update
-    void Start()
-    { 
-        //get seleted item to fill list
-        //UpdateSelectedColors();   
     }
 
-    private void UpdateSelectedColors()
-    {
-        SelectedBubbleColors.Clear();
-    }
-
-    private void UpdateSelectedSpeed(string value)
+    public void UpdateSelectedSpeed(string value)
     {
         PlayerPrefs.SetString("SelectedSpeed", value);
         int nbr = PlayerPrefs.GetString("SelectedSpeed") == "low" ? 80 :
@@ -115,7 +102,7 @@ public class SettingScript : MonoBehaviour
         PlayerPrefs.SetInt("SpeedShotBubble", nbr);
     }
 
-    private void UpdateSelectedDifficulty(string value)
+    public void UpdateSelectedDifficulty(string value)
     {
         PlayerPrefs.SetString("Difficulty", value);
         int nbr = PlayerPrefs.GetString("Difficulty") == "easy" ?  10 :
@@ -123,54 +110,50 @@ public class SettingScript : MonoBehaviour
         PlayerPrefs.SetInt("CountOfShotBeforeBubbleInsertion",nbr);
     }
 
-    private void UpdateArrowColor(string value)
+    public void UpdateArrowColor(string value)
     {
         PlayerPrefs.SetString("ArrowColor", value);
     }
 
-    private void UpdateCountOfShotBeforeBubbleInsertion(int value)
+    public void UpdateCountOfShotBeforeBubbleInsertion(int value)
     {
         PlayerPrefs.SetInt("CountOfShotBeforeBubbleInsertion", value);
     }
 
-    private void UpdateSpeedShotBubble(int value)
+    public void UpdateSpeedShotBubble(int value)
     {
         PlayerPrefs.SetInt("SpeedShotBubble", value);
     }
 
-    private void UpdateCountOfBubbleToExplode(int value)
+    public void UpdateCountOfBubbleToExplode(int value)
     {
         PlayerPrefs.SetInt("CountOfBubbleToExplode", value);
     }
 
-    private void UpdateCountOfBubbleColor(int value)
+    public void UpdateCountOfBubbleColor(int value)
     {
         PlayerPrefs.SetInt("CountOfBubbleColor", value);
     }
 
-    private void UpdateCountOfBubbleRow(int value)
+    public void UpdateCountOfBubbleRow(int value)
     {
         PlayerPrefs.SetInt("CountOfBubbleRow", value);
     }
 
-    private void UpdateCountOfBubbleColumn(int value)
+    public void UpdateCountOfBubbleColumn(int value)
     {
         PlayerPrefs.SetInt("CountOfBubbleColumn", value);
     }
 
-    private void UpdateVolum(int value)
+    public void UpdateVolum(int value)
     {
         PlayerPrefs.SetInt("Volum", value);
->>>>>>> b280bd419c010b27a49c0af33f9b91f947263a13
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         //UpdateSelectedColors();
-=======
         //put all
->>>>>>> b280bd419c010b27a49c0af33f9b91f947263a13
     }
 }
