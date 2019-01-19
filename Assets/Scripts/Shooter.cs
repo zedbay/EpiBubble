@@ -5,8 +5,18 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject projectile;
-    
+    public List<GameObject> projectiles_list = new List<GameObject>();
+    public GameObject projectile1;
+    public GameObject projectile2;
+    public GameObject projectile3;
+
+    private void Start()
+    {
+        projectiles_list.Add(projectile1);
+        projectiles_list.Add(projectile2);
+        projectiles_list.Add(projectile3);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +28,7 @@ public class Shooter : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(projectile, firePoint.position, firePoint.rotation);
+        int projectile_index = Random.Range(0, 3);
+        Instantiate(projectiles_list[projectile_index], firePoint.position, firePoint.rotation);
     }
 }

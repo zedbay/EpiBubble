@@ -13,13 +13,13 @@ public class Projectile : MonoBehaviour
         rb.velocity = transform.right * speed;
 
     }
-
+    
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if(hitInfo.name == "DirtTop" || hitInfo.name == "Projectile(Clone)")
+        if(hitInfo.name == "DirtTop" || hitInfo.name == "red_projectile(Clone)" || hitInfo.name == "blue_projectile(Clone)" || hitInfo.name == "yellow_projectile(Clone)")
         {
             rb.velocity = transform.right * 0;
             rb.isKinematic = true;
-        }
+        } 
     }
 }
