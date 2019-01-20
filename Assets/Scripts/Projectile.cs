@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 300F;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if(hitInfo.name == "DirtTop" || hitInfo.name == "red_projectile(Clone)" || hitInfo.name == "blue_projectile(Clone)" || hitInfo.name == "yellow_projectile(Clone)")
+        if(hitInfo.name == "DirtTop" || hitInfo.name == "BubbleBase(Clone)" || hitInfo.name == "BubbleProjectile(Clone)")
         {
             rb.velocity = transform.right * 0;
             rb.isKinematic = true;
