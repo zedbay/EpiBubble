@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\InitParty.cs" />
     <Compile Include="Assets\Scripts\Level\Board\Board.cs" />
     <Compile Include="Assets\Scripts\Level\Board\Emplacement.cs" />
-    <Compile Include="Assets\Scripts\Level\LevelCreator.cs" />
+    <Compile Include="Assets\Scripts\Level\Board\NewClass.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Menu\MooveMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\RaccourciVolume.cs" />

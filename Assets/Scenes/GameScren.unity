@@ -687,7 +687,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29bb5fcb5bf364c63b434446d0512988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
+  tilemap: {fileID: 995029502}
+  prefabBulle: {fileID: 6677019116200753950, guid: 071524fe0d7d8f14f9d08140647eaa59,
+    type: 3}
 --- !u!1 &746123442
 GameObject:
   m_ObjectHideFlags: 0
