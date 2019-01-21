@@ -49,19 +49,6 @@ public class InitGame : MonoBehaviour
     public void InitializeValues()
     {
         SelectedBubbleColor = new List<Color>();
-        ColorUtility.TryParseHtmlString("#000000", out Black);
-        ColorUtility.TryParseHtmlString("#C0C0C0", out Silver);
-        ColorUtility.TryParseHtmlString("#808080", out Grey);
-        ColorUtility.TryParseHtmlString("#FFFFFF", out White);
-        ColorUtility.TryParseHtmlString("#800000", out Maroon);
-        ColorUtility.TryParseHtmlString("#FF0000", out Red);
-        ColorUtility.TryParseHtmlString("#800080", out Purple);
-        ColorUtility.TryParseHtmlString("#FF00FF", out Fuchsia);
-        ColorUtility.TryParseHtmlString("#008000", out Green);
-        ColorUtility.TryParseHtmlString("#00FF00", out Lime);
-        ColorUtility.TryParseHtmlString("#FFFF00", out Yellow);
-        ColorUtility.TryParseHtmlString("#0000F0", out Blue);
-        ColorUtility.TryParseHtmlString("#00FFFF", out Cyan);
         ColorDico = new Dictionary<string, Color>() {
             { "Black", Black},
             { "Silver",Silver},
@@ -78,12 +65,12 @@ public class InitGame : MonoBehaviour
             { "Cyan",Cyan}
         };
 
-        ColorUtility.TryParseHtmlString("#327DA0", out arrowAstral);
-        ColorUtility.TryParseHtmlString("#F64A8A", out arrowRose);
-        ColorUtility.TryParseHtmlString("#808000", out arrowOlive);
-        ColorUtility.TryParseHtmlString("#808080", out arrowGrey);
-        ColorUtility.TryParseHtmlString("#800000", out arrowMaroon);
-        ColorUtility.TryParseHtmlString("#FFD700", out arrowGold);
+        //ColorUtility.TryParseHtmlString("#327DA0", out arrowAstral);
+        //ColorUtility.TryParseHtmlString("#F64A8A", out arrowRose);
+        //ColorUtility.TryParseHtmlString("#808000", out arrowOlive);
+        //ColorUtility.TryParseHtmlString("#808080", out arrowGrey);
+       // ColorUtility.TryParseHtmlString("#800000", out arrowMaroon);
+       // ColorUtility.TryParseHtmlString("#FFD700", out arrowGold);
 
         arrowColorDico = new Dictionary<string, Color>() {
             { "Astral", arrowAstral},

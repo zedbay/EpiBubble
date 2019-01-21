@@ -53,7 +53,7 @@ public class MooveMenu : MonoBehaviour
 
     private void Leave()
     {
-        Application.Quit();
+        UnityEngine.Application.Quit();
     }
 
     private void ShowLeave()

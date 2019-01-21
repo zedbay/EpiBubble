@@ -71,7 +71,7 @@ public class UsefullScrit : MonoBehaviour
         System.Random r = new System.Random();
         int rInt = r.Next(1, InitGame.CountOfBubbleColor+1); //for ints       
         Color color = InitGame.ColorDico[PlayerPrefs.GetString("Color" + (rInt).ToString())];
-        ColorUtility.TryParseHtmlString(rdnstr,out color);
+       //ColorUtility.TryParseHtmlString(rdnstr,out color);
 
         return color;
     }

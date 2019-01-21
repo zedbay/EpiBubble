@@ -1,0 +1,2 @@
+/Users/antoineheurtault/Projets/EpiBubble/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/antoineheurtault/Projets/EpiBubble/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

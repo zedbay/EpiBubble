@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Projectile : MonoBehaviour
 {
@@ -22,4 +23,7 @@ public class Projectile : MonoBehaviour
             rb.isKinematic = true;
         } 
     }
+
+
+
 }

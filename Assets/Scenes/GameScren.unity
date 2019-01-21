@@ -301,7 +301,6 @@ MonoBehaviour:
   firePoint: {fileID: 1398445514}
   projectile1: {fileID: 6677019116200753950, guid: faed11118585304498f108f8f4f8b604,
     type: 3}
-  SelectedBubbleColor: []
   nextProjectileUI: {fileID: 1276921583}
 --- !u!1 &133218164
 GameObject:
@@ -649,6 +648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 562062129}
+  - component: {fileID: 562062130}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -675,6 +675,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &562062130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562062128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bb5fcb5bf364c63b434446d0512988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
 --- !u!1 &746123442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,7 +1915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1491396313}
   - component: {fileID: 1491396315}
-  - component: {fileID: 1491396314}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -1925,22 +1937,6 @@ Transform:
   m_Father: {fileID: 562062129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1491396314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491396312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce4dc34435cb644f4a2dbc095649fc26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBulle: {fileID: 6677019116200753950, guid: 071524fe0d7d8f14f9d08140647eaa59,
-    type: 3}
-  tilemap: {fileID: 995029502}
-  SelectedBubbleColor: []
 --- !u!156049354 &1491396315
 Grid:
   m_ObjectHideFlags: 0

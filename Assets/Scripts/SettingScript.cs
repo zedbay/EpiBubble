@@ -22,19 +22,19 @@ public class SettingScript : MonoBehaviour
     public static Color Cyan;
     public void InitGame()
     {
-        ColorUtility.TryParseHtmlString("#000000", out Black);
-        ColorUtility.TryParseHtmlString("#000000", out Silver);
-        ColorUtility.TryParseHtmlString("#000000", out Grey);
-        ColorUtility.TryParseHtmlString("#000000", out White);
-        ColorUtility.TryParseHtmlString("#000000", out Maroon);
-        ColorUtility.TryParseHtmlString("#000000", out Red);
-        ColorUtility.TryParseHtmlString("#000000", out Purple);
-        ColorUtility.TryParseHtmlString("#000000", out Fuchsia);
-        ColorUtility.TryParseHtmlString("#000000", out Green);
-        ColorUtility.TryParseHtmlString("#000000", out Lime);
-        ColorUtility.TryParseHtmlString("#000000", out Yellow);
-        ColorUtility.TryParseHtmlString("#000000", out Blue);
-        ColorUtility.TryParseHtmlString("#000000", out Cyan);
+        //ColorUtility.TryParseHtmlString("#000000", out Black);
+        //ColorUtility.TryParseHtmlString("#000000", out Silver);
+        //ColorUtility.TryParseHtmlString("#000000", out Grey);
+        //ColorUtility.TryParseHtmlString("#000000", out White);
+       // ColorUtility.TryParseHtmlString("#000000", out Maroon);
+       // ColorUtility.TryParseHtmlString("#000000", out Red);
+        //ColorUtility.TryParseHtmlString("#000000", out Purple);
+       // ColorUtility.TryParseHtmlString("#000000", out Fuchsia);
+      // ColorUtility.TryParseHtmlString("#000000", out Green);
+      // ColorUtility.TryParseHtmlString("#000000", out Lime);
+       // ColorUtility.TryParseHtmlString("#000000", out Yellow);
+       // ColorUtility.TryParseHtmlString("#000000", out Blue);
+       // ColorUtility.TryParseHtmlString("#000000", out Cyan);
         ColorDico = new Dictionary<string, Color>() {
             { "Black", Black},
             { "Silver",Silver},
@@ -61,12 +61,12 @@ public class SettingScript : MonoBehaviour
         //get seleted item to fill list
         //UpdateSelectedColors();
 
-        SelectedBubbleColors.Add(Color.black);
-        SelectedBubbleColors.Add(Color.blue);
-        SelectedBubbleColors.Add(Color.red);
-        SelectedBubbleColors.Add(Color.green);
-        SelectedBubbleColors.Add(Color.magenta);
-        SelectedBubbleColors.Add(Color.yellow);
+        //SelectedBubbleColors.Add(Color.black);
+        //SelectedBubbleColors.Add(Color.blue);
+        //SelectedBubbleColors.Add(Color.red);
+       // SelectedBubbleColors.Add(Color.green);
+      //  SelectedBubbleColors.Add(Color.magenta);
+       // SelectedBubbleColors.Add(Color.yellow);
     }
 
     public void firstInit()
