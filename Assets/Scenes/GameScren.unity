@@ -201,7 +201,6 @@ GameObject:
   m_Component:
   - component: {fileID: 132278589}
   - component: {fileID: 132278590}
-  - component: {fileID: 132278592}
   - component: {fileID: 132278591}
   m_Layer: 0
   m_Name: Shooter
@@ -286,22 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &132278592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132278588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6201c6f6bdb204d02b04c73e6a149673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1398445514}
-  projectile1: {fileID: 6677019116200753950, guid: faed11118585304498f108f8f4f8b604,
-    type: 3}
-  nextProjectileUI: {fileID: 1276921583}
 --- !u!1 &133218164
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +673,11 @@ MonoBehaviour:
   tilemap: {fileID: 995029502}
   prefabBulle: {fileID: 6677019116200753950, guid: 071524fe0d7d8f14f9d08140647eaa59,
     type: 3}
+  firePoint: {fileID: 1398445514}
+  projectile1: {fileID: 6677019116200753950, guid: faed11118585304498f108f8f4f8b604,
+    type: 3}
+  nextProjectileUI: {fileID: 1276921583}
+  rb: {fileID: 0}
 --- !u!1 &746123442
 GameObject:
   m_ObjectHideFlags: 0

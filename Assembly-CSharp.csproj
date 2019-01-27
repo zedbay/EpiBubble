@@ -66,14 +66,12 @@
     <Compile Include="Assets\Scripts\InitParty.cs" />
     <Compile Include="Assets\Scripts\Level\Board\Board.cs" />
     <Compile Include="Assets\Scripts\Level\Board\Emplacement.cs" />
-    <Compile Include="Assets\Scripts\Level\Board\NewClass.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Menu\MooveMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\RaccourciVolume.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\RotateObjectTowards.cs" />
     <Compile Include="Assets\Scripts\SettingScript.cs" />
-    <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Tools\Color.cs" />
     <Compile Include="Assets\Scripts\UsefullScrit.cs" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />

@@ -11,18 +11,45 @@ public class LevelManager : MonoBehaviour
     public Application.Board board = new Application.Board();
     private Color color;
 
+    public Transform firePoint;
+    public GameObject projectile1;
+    public GameObject nextProjectileUI;
+    private int currentShoot;
+    public Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
         this.color = new Color();
         this.CreateLevel();
-        this.MooveBottom();
+        this.currentShoot = 0;
+        UnityEngine.Color randomColor = color.GetRandomColor();
+        projectile1.GetComponent<SpriteRenderer>().color = randomColor;
+        nextProjectileUI.GetComponent<SpriteRenderer>().color = randomColor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        Debug.Log("hello");
+        currentShoot++;
+        if (currentShoot % 6 == 0)
+        {
+            MooveBottom();
+            GenerateLine();
+        }
+        Instantiate(projectile1, firePoint.position, firePoint.rotation);
+        UnityEngine.Color randomColor = color.GetRandomColor();
+        projectile1.GetComponent<SpriteRenderer>().color = randomColor;
+        nextProjectileUI.GetComponent<SpriteRenderer>().color = randomColor;
     }
 
     private void CreateLevel()

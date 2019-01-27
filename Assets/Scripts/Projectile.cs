@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class Projectile : MonoBehaviour
 {
     public float speed = 300F;
     public Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
         {
             rb.velocity = transform.right * 0;
             rb.isKinematic = true;
+            Debug.Log(rb.transform.position);
         } 
     }
 
